@@ -10,7 +10,7 @@ const ProductItem = ({ product }) => {
           <img
             src={product.image}
             alt={product.name}
-            className="rounded shadow oject-cover h-auto w-full"
+            className="oject-cover h-auto w-full rounded shadow"
           />
         </a>
       </Link>
