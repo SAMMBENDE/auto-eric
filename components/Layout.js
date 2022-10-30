@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import Cookies from "js-cookie";
 import React, { useContext, useEffect, useState } from "react";
 import { ToastContainer } from "react-toastify";
 import { Store } from "../utils/Store";
@@ -8,7 +9,6 @@ import { signOut, useSession } from "next-auth/react";
 import "react-toastify/dist/ReactToastify.css";
 import { Menu } from "@headlessui/react";
 import DropdownLink from "./DropdownLink";
-import Cookies from "js-cookie";
 
 const Layout = ({ title, children }) => {
   const { status, data: session } = useSession();

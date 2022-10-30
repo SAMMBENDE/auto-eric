@@ -7,8 +7,10 @@ const Unauthorized = () => {
   const { message } = router.query;
   return (
     <Layout title="Unauthorized Page">
-      <h1 className="text-xl">Access Denied</h1>
-      <h2>Oops, You don&apos;t have permission to access this page.</h2>
+      <h1 className="text-xl">
+        Oops, You don&apos;t have permission to access this page.
+      </h1>
+
       {message && <div className="mb-4 text-red-500">{message}</div>}
     </Layout>
   );
