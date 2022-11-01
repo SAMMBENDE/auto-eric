@@ -88,6 +88,18 @@ const data = {
       countInStock: 20,
       description: "A beautiful jewel",
     },
+    {
+      name: "Turbo Panamera",
+      slug: "turbo-panamera",
+      category: "New",
+      image: "/images/car1.jpg",
+      price: 70000,
+      brand: "Porche",
+      rating: 4.5,
+      numReviews: 8,
+      countInStock: 20,
+      description: "A beautiful jewel",
+    },
   ],
 };
 

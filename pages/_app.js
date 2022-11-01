@@ -7,7 +7,6 @@ const MyApp = ({ Component, pageProps: { session, ...pageProps } }) => {
   return (
     <SessionProvider session={session}>
       <StoreProvider>
-        <Component {...pageProps} />
         {Component.auth ? (
           <Auth>
             <Component {...pageProps} />
