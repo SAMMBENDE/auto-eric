@@ -50,6 +50,7 @@ const Layout = ({ title, children }) => {
                 Auto<span className="text-blue-600">Eric</span>
               </a>
             </Link>
+
             <div>
               <Link href="/cart">
                 <a className="p-4">
@@ -105,7 +106,15 @@ const Layout = ({ title, children }) => {
         <main className="container m-auto mt-4 px-4">{children}</main>
         <footer className="flex h-10 items-center justify-center shadow-inner">
           <p>
-            Copyright &copy;2022 Auto<span className="text-blue-600">Eric</span>
+            Copyright &copy;2022 Auto<span className="text-blue-600">Eric</span>{" "}
+            &nbsp;|{" "}
+            <Link href="/privacy">
+              <a>Privacy Policy</a>
+            </Link>
+            &nbsp; |{" "}
+            <Link href="/terms">
+              <a>Terms of Service</a>
+            </Link>
           </p>
         </footer>
       </div>

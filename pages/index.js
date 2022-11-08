@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useContext } from "react";
 import { toast } from "react-toastify";
+import Footer from "../components/Footer";
 import Layout from "../components/Layout";
 import ProductItem from "../components/ProductItem";
 import Product from "../models/Product";
@@ -36,6 +37,7 @@ export default function Home({ products }) {
           ></ProductItem>
         ))}
       </div>
+      <Footer />
     </Layout>
   );
 }
