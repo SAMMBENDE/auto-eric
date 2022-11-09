@@ -8,7 +8,7 @@ import { FaYoutube } from "react-icons/fa";
 const Footer = () => {
   return (
     <>
-      <div className="flex h-1/2 w-full flex-col items-start justify-around bg-gray-50 p-20 md:flex-row">
+      <div className="flex h-1/2 w-full flex-col items-start justify-around bg-gray-50 p-20 md:flex-row ">
         <div className="p-5 ">
           <ul>
             <p className="pb-6 text-3xl font-bold text-gray-800">
@@ -17,7 +17,7 @@ const Footer = () => {
             <p className="pb-2 text-xl font-bold text-gray-400">
               Connect with us
             </p>
-            <div className="flex gap-6 pb-5">
+            <div className="flex gap-6">
               <Link href="https://nextjs.org/blog/next-13">
                 <a target="_blank">
                   <FaInstagram className="cursor-pointer text-2xl text-yellow-600 hover:text-yellow-800" />
@@ -43,7 +43,7 @@ const Footer = () => {
         </div>
         <div className="p-5">
           <ul>
-            <p className="pb-4 text-2xl font-bold text-gray-800">Services</p>
+            <p className="pb-4 text-xl font-bold text-gray-800">Services</p>
             <li>
               <Link href="/">
                 <a className="text-md cursor-pointer pb-2 font-semibold text-gray-500 hover:text-blue-600">
@@ -69,7 +69,7 @@ const Footer = () => {
         </div>
         <div className="p-5">
           <ul>
-            <p className=" pb-4 text-2xl font-bold text-gray-800">Company</p>
+            <p className=" pb-4 text-xl font-bold text-gray-800">Company</p>
             <li>
               <Link href="/">
                 <a className="text-md cursor-pointer  pb-2 font-semibold text-gray-500 hover:text-blue-600">
@@ -95,7 +95,7 @@ const Footer = () => {
         </div>
         <div className="p-5">
           <ul>
-            <p className="pb-4 text-2xl font-bold text-gray-800">Support</p>
+            <p className="pb-4 text-xl font-bold text-gray-800">Support</p>
 
             <li>
               <Link href="/">
