@@ -108,7 +108,7 @@ const Layout = ({ title, children }) => {
         <Footer />
         <footer className="flex h-10 items-center justify-center shadow-inner">
           <p>
-            Copyright &copy;2022 AutoEric{" "}
+            &copy;2022 AutoEric{" "}
             <Link href="/privacy">
               <a>Privacy Policy</a>
             </Link>
