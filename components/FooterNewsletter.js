@@ -132,7 +132,7 @@ const FooterNewsletter = () => {
             <div>
               Copyright &copy;2022 <strong>AutoEric</strong>{" "}
             </div>
-            <div className="font-thin text-yellow-500">Sam Mbende</div>
+            <div className="font-thin text-xs text-yellow-500">Sam Mbende</div>
           </div>
         </div>
         <div className="mb-2 text-center text-sm ">
