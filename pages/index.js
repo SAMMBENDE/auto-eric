@@ -7,7 +7,7 @@ import Product from "../models/Product";
 import db from "../utils/db";
 import { Store } from "../utils/Store";
 
-export default function Home({ products }) {
+const Home = ({ products }) => {
   const { state, dispatch } = useContext(Store);
   const { cart } = state;
 
@@ -38,7 +38,7 @@ export default function Home({ products }) {
       </div>
     </Layout>
   );
-}
+};
 
 export async function getServerSideProps() {
   await db.connect();
@@ -49,3 +49,4 @@ export async function getServerSideProps() {
     },
   };
 }
+export default Home;
