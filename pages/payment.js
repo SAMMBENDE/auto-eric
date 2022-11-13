@@ -12,6 +12,7 @@ const PaymentScreen = () => {
   const { state, dispatch } = useContext(Store);
   const { cart } = state;
   const { shippingAddress, paymentMethod } = cart;
+
   const router = useRouter();
 
   const submitHandler = (e) => {
@@ -72,6 +73,5 @@ const PaymentScreen = () => {
     </Layout>
   );
 };
-
-export default PaymentScreen;
 PaymentScreen.auth = true;
+export default PaymentScreen;
