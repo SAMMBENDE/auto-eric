@@ -34,7 +34,9 @@ const Layout = ({ title, children }) => {
         <meta name="description" content="Ecommerce website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <ToastContainer possition="bottom-center" limit={1} />
+
       <div className="flex min-h-screen flex-col justify-between">
         <header>
           <nav className="flex h-12 items-center justify-between px-4 shadow-md">

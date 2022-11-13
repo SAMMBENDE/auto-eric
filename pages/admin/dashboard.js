@@ -1,9 +1,7 @@
 import axios from "axios";
 import Link from "next/link";
-import React, { useEffect, useReducer } from "react";
-import Layout from "../../components/Layout";
-import { getError } from "../../utils/error";
 import { Bar } from "react-chartjs-2";
+
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -13,6 +11,9 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
+import React, { useEffect, useReducer } from "react";
+import Layout from "../../components/Layout";
+import { getError } from "../../utils/error";
 
 ChartJS.register(
   CategoryScale,

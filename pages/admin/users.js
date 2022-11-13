@@ -118,7 +118,7 @@ const AdminUsersScreen = () => {
                         <Link href={`/admin/user/${user._id}`} passHref>
                           <a
                             type="button"
-                            className="rounded bg-green-300 py-2 px-4 text-green-600 shadow outline-none hover:bg-green-800 hover:text-white active:bg-green-500"
+                            className="rounded bg-green-800 py-2 px-4 text-white shadow outline-none hover:bg-green-700 hover:text-white active:bg-green-500"
                           >
                             Edit
                           </a>
@@ -126,7 +126,7 @@ const AdminUsersScreen = () => {
                         &nbsp;
                         <button
                           type="button"
-                          className="rounded bg-red-300 py-2 px-4 text-red-600 shadow outline-none hover:bg-red-800 hover:text-white active:bg-red-500"
+                          className="rounded bg-red-800 py-2 px-4 text-white shadow outline-none hover:bg-red-700 hover:text-white active:bg-red-500"
                           onClick={() => deleteHandler(user._id)}
                         >
                           Delete

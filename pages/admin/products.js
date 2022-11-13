@@ -158,14 +158,17 @@ const AdminProductScreen = () => {
                       <td className=" p-5 ">{product.rating}</td>
                       <td className=" p-5 ">
                         <Link href={`/admin/product/${product._id}`}>
-                          <a type="button" className="default-button">
+                          <a
+                            type="button"
+                            className="rounded bg-green-800 py-2 px-4 text-white shadow outline-none hover:bg-green-700 hover:text-white active:bg-green-500"
+                          >
                             Edit
                           </a>
                         </Link>
                         &nbsp;
                         <button
                           onClick={() => deleteHandler(product._id)}
-                          className="default-button"
+                          className="rounded bg-red-800 py-2 px-4 text-white shadow outline-none hover:bg-red-700 hover:text-white active:bg-red-500"
                           type="button"
                         >
                           Delete

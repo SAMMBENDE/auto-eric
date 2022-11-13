@@ -17,7 +17,7 @@ const Home = ({ products }) => {
     const { data } = await axios.get(`/api/products/${product._id}`);
 
     if (data.countInStock < quantity) {
-      toast.error("Sorry! This car is out of stock");
+      toast.error("Sorry!  Out of stock");
       return;
     }
 
