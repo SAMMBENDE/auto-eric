@@ -12,5 +12,3 @@ export default function signature(req, res) {
   res.statusCode = 200;
   res.json({ signature, timestamp });
 }
-
-signature.auth = { adminOnly: true };
