@@ -27,7 +27,6 @@ const Layout = ({ title, children }) => {
     signOut({ callbackUrl: "/login" });
   };
 
-  const newLocal = <FooterNewsletter />;
   return (
     <>
       <Head>
@@ -118,7 +117,7 @@ const Layout = ({ title, children }) => {
           </nav>
         </header>
         <main className="container m-auto mt-4 px-4">{children}</main>
-        {newLocal}
+        <FooterNewsletter />
       </div>
     </>
   );
