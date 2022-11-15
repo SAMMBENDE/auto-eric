@@ -9,7 +9,7 @@ import { signOut, useSession } from "next-auth/react";
 import "react-toastify/dist/ReactToastify.css";
 import { Menu } from "@headlessui/react";
 import DropdownLink from "./DropdownLink";
-// import FooterNewsletter from "./FooterNewsletter";
+import FooterNewsletter from "./FooterNewsletter";
 
 const Layout = ({ title, children }) => {
   const { status, data: session } = useSession();
@@ -27,6 +27,7 @@ const Layout = ({ title, children }) => {
     signOut({ callbackUrl: "/login" });
   };
 
+  const newLocal = <FooterNewsletter />;
   return (
     <>
       <Head>
@@ -117,10 +118,7 @@ const Layout = ({ title, children }) => {
           </nav>
         </header>
         <main className="container m-auto mt-4 px-4">{children}</main>
-        {/* <FooterNewsletter /> */}
-        <footer className="flex h-10 items-center justify-center shadow-inner">
-          <p>Copyright © 2022 Amazona</p>
-        </footer>
+        {newLocal}
       </div>
     </>
   );
