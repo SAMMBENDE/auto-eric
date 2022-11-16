@@ -100,6 +100,19 @@ const data = {
       countInStock: 20,
       description: "A beautiful jewel",
     },
+    {
+      name: "Toyota Prado",
+      slug: "toyota-prado",
+      category: "Used",
+      image: "/images/prado.jpg",
+      price: 70000,
+      brand: "Toyota",
+      rating: 4.5,
+      numReviews: 8,
+      countInStock: 20,
+      description:
+        "Toyota Prado IV, Year 2009, fuel, V6 engine, 5 doors, 6X speed",
+    },
   ],
 };
 
