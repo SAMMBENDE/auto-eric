@@ -4,8 +4,9 @@ import { FaInstagram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
+import Newsletter from "./Newsletter";
 
-const FooterNewsletter = () => {
+const Footer = () => {
   return (
     <>
       <div className="bg-gray-100 p-10 text-gray-800">
@@ -104,25 +105,7 @@ const FooterNewsletter = () => {
                 </li>
               </ul>
             </div>
-            <div>
-              <h4 className="pb-4 font-semibold text-gray-800">
-                Join our Newsletter
-              </h4>
-              <p className="pb-4 text-gray-600">
-                Be the first to know about good deals & new arrivals by joining
-                our free weekly newsletter.
-              </p>
-              <form className="flex flex-row flex-wrap">
-                <input
-                  type="text"
-                  className="w-2/3 p-2 text-gray-500 focus:border-yellow-500"
-                  placeholder="email@example.com"
-                />
-                <button className="primary-button w-1/3 text-sm text-black">
-                  Subscribe
-                </button>
-              </form>
-            </div>
+            <Newsletter />
           </div>
         </div>
       </div>
@@ -162,4 +145,4 @@ const FooterNewsletter = () => {
   );
 };
 
-export default FooterNewsletter;
+export default Footer;

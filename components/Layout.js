@@ -9,7 +9,7 @@ import { signOut, useSession } from "next-auth/react";
 import "react-toastify/dist/ReactToastify.css";
 import { Menu } from "@headlessui/react";
 import DropdownLink from "./DropdownLink";
-import FooterNewsletter from "./FooterNewsletter";
+import Footer from "./Footer";
 
 const Layout = ({ title, children }) => {
   const { status, data: session } = useSession();
@@ -117,7 +117,7 @@ const Layout = ({ title, children }) => {
           </nav>
         </header>
         <main className="container m-auto mt-4 px-4">{children}</main>
-        <FooterNewsletter />
+        <Footer />
       </div>
     </>
   );
