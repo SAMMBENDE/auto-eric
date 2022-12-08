@@ -115,7 +115,16 @@ const Footer = () => {
             <div>
               Copyright &copy;2022 <strong>AutoEric</strong>{" "}
             </div>
-            <div className="text-xs font-thin text-yellow-500">Sam Mbende</div>
+            <Link href="https://sammbende.github.io/My-personal-portfolio/">
+              <a target="_blank">
+                <div className="text-xs font-thin text-yellow-500">
+                  Developer contact information
+                </div>
+              </a>
+            </Link>
+            {/* <div className="text-xs font-thin text-yellow-500">
+              Developer contact information
+            </div> */}
           </div>
         </div>
         <div className="mb-2 text-center text-sm ">

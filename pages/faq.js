@@ -1,9 +1,9 @@
 import React from "react";
 import Layout from "../components/Layout";
 
-const FrequentlyAskedQuestions = () => {
+const frequentlyAskedQuestions = () => {
   return (
-    <Layout title="FAQ">
+    <Layout title="Frequently Asked Questions">
       <div>
         <h1>Frequently Asked Questions</h1>
       </div>
@@ -11,4 +11,4 @@ const FrequentlyAskedQuestions = () => {
   );
 };
 
-export default FrequentlyAskedQuestions;
+export default frequentlyAskedQuestions;

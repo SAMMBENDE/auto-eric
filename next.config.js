@@ -3,7 +3,12 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: false,
   images: {
-    domains: ["assets.stickpng.com", "unsplash.com", "res.cloudinary.com"],
+    domains: [
+      "assets.stickpng.com",
+      "images.unsplash.com",
+      "res.cloudinary.com",
+      "unsplash.com",
+    ],
   },
 };
 

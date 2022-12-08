@@ -39,7 +39,7 @@ const AdminUsersScreen = () => {
       try {
         dispatch({ type: "FETCH_REQUEST" }); // shows a loading box
         const { data } = await axios.get(`/api/admin/users`); //get all users from backend
-        dispatch({ type: "FETCH_SUCCESS", payload: data }); //put data from bacend to UI
+        dispatch({ type: "FETCH_SUCCESS", payload: data }); //put data from backend to UI
       } catch (err) {
         dispatch({ type: "FETCH_FAIL", payload: getError(err) });
       }
