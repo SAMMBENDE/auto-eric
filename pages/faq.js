@@ -15,7 +15,7 @@ const frequentlyAskedQuestions = () => {
             </div>
             <div className="mt-3 hidden text-gray-700 group-focus:flex">
               <p>
-                This depends on the age og the car and its kilometric coverage.
+                This depends on the age of the car and its kilometric coverage.
               </p>
             </div>
           </button>
