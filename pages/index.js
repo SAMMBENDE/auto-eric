@@ -1,4 +1,5 @@
 import axios from "axios";
+import Image from "next/image";
 import { useContext } from "react";
 import { toast } from "react-toastify";
 import Layout from "../components/Layout";
@@ -6,12 +7,8 @@ import ProductItem from "../components/ProductItem";
 import Product from "../models/Product";
 import db from "../utils/db";
 import { Store } from "../utils/Store";
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import Link from "next/link";
-import Image from "next/image";
 
-const Home = ({ products, featuredProducts }) => {
+const Home = ({ products }) => {
   const { state, dispatch } = useContext(Store);
   const { cart } = state;
 
@@ -31,24 +28,14 @@ const Home = ({ products, featuredProducts }) => {
   };
   return (
     <Layout title="Home Page">
-      <Carousel showThumbs={false} autoPlay>
-        {featuredProducts.map((product) => (
-          <div key={product._id}>
-            <Link href={`/product/${product.slug}`} passHref>
-              <a className="flex w-full object-contain">
-                <Image
-                  src={product.banner}
-                  alt={product.name}
-                  width="1300"
-                  height="600"
-                />
-              </a>
-            </Link>
-          </div>
-        ))}
-      </Carousel>
-      <h2 className="h2 my-4">Latest Products</h2>
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4">
+      <div className="body-font sm: my-16 border-b border-gray-200">
+        <h3 className="md:text4xl text-center font-semibold uppercase text-black sm:text-2xl lg:text-6xl">
+          quality used cars
+        </h3>
+        <Image src="/images/hero.png" alt="" width="2000" height="600" />
+      </div>
+
+      <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4">
         {products.map((product) => (
           <ProductItem
             product={product}
@@ -64,10 +51,9 @@ const Home = ({ products, featuredProducts }) => {
 export async function getServerSideProps() {
   await db.connect();
   const products = await Product.find().lean();
-  const featuredProducts = await Product.find({ isFeatured: true }).lean();
+
   return {
     props: {
-      featuredProducts: featuredProducts.map(db.convertDocToObj),
       products: products.map(db.convertDocToObj),
     },
   };

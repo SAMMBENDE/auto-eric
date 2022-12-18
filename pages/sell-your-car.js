@@ -1,15 +1,15 @@
 import React from "react";
 import Layout from "../components/Layout";
 
-const Pricing = () => {
+const SellYourCar = () => {
   return (
-    <Layout title="Pricing">
+    <Layout title="Sell-your-car">
       <div>
         <section className="box-border border-0 border-solid border-gray-200 bg-white py-8 leading-7 text-gray-900 sm:py-12 md:py-16 lg:py-24">
           <div className="mx-auto box-border max-w-6xl border-solid px-4 pb-12 sm:px-6 md:px-6 lg:px-4">
             <div className="flex flex-col items-center text-center leading-7 text-gray-900">
               <h2 className="m-0 box-border border-solid text-3xl font-semibold leading-tight tracking-tight text-black sm:text-4xl md:text-5xl">
-                Flexible Plans
+                This Page is under construction
               </h2>
               <p className="mt-4 box-border border-solid text-2xl leading-normal text-gray-900">
                 Affordable prices that suit different budget sizes
@@ -82,4 +82,4 @@ const Pricing = () => {
   );
 };
 
-export default Pricing;
+export default SellYourCar;

@@ -12,10 +12,11 @@ const Footer = () => {
       <div className="bg-gray-100 p-10 text-gray-800">
         <div className="max-w-12xl mx-auto">
           <div className="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-4">
-            <div className="mb-5">
+            <div className=" mb-5">
               <h4 className="pb-4 text-2xl font-bold">
                 Auto<span className="text-blue-800">Eric</span>
               </h4>
+
               <p className="text-gray-600">
                 114 Av. Ambroisse Croizat <br />
                 93150 Le Blanc Mesnil <br />
@@ -43,23 +44,17 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/pricing">
+                  <Link href="/sell-your-car">
                     <a className="cursor-pointer hover:text-yellow-800">
-                      Pricing
+                      Sell Your Car
                     </a>
                   </Link>
                 </li>
+
                 <li>
-                  <Link href="/privacy">
+                  <Link href="/terms-and-privacy">
                     <a className="cursor-pointer hover:text-yellow-800">
-                      Privacy Policy
-                    </a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/terms-of-service">
-                    <a className="cursor-pointer hover:text-yellow-800">
-                      Terms of Service
+                      Terms & Privacy
                     </a>
                   </Link>
                 </li>
@@ -93,13 +88,6 @@ const Footer = () => {
                   <Link href="/news">
                     <a className="cursor-pointer  hover:text-yellow-800">
                       What&apos;s new
-                    </a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/deals">
-                    <a className="cursor-pointer  hover:text-yellow-800">
-                      Good Deals
                     </a>
                   </Link>
                 </li>

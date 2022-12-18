@@ -7,12 +7,12 @@ const ContactPage = () => {
       <div>
         <div className="mx-auto max-w-screen-md p-5">
           <div className="mb-16 text-center">
-            <p className="font-regular mt-4 text-sm uppercase leading-7 text-gray-500">
-              Contact
-            </p>
             <h3 className="text-3xl font-extrabold leading-normal tracking-tight text-gray-900 sm:text-4xl">
-              Get In <span className="text-blue-600">Touch</span>
+              How to Contact Us and Subscribe
             </h3>
+            <p className="font-regular mt-4 text-sm uppercase leading-7 text-gray-500">
+              We&apos;d love to hear from you.
+            </p>
           </div>
 
           <form className="w-full">

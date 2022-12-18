@@ -42,10 +42,10 @@ const Layout = ({ title, children }) => {
           <nav className="flex h-12 items-center justify-between px-4 shadow-md">
             <div>
               <Image
-                src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c4a3.png"
+                src="/images/logo2.png"
                 alt="Auto Eric logo"
                 height="50"
-                width="100"
+                width="80"
               />
             </div>
             <Link href="/">
