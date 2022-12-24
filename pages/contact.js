@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import Layout from "../components/Layout";
 
@@ -8,11 +9,19 @@ const ContactPage = () => {
         <div className="mx-auto max-w-screen-md p-5">
           <div className="mb-16 text-center">
             <h3 className="text-3xl font-extrabold leading-normal tracking-tight text-gray-900 sm:text-4xl">
-              How to Contact Us and Subscribe
+              How to Contact Us
             </h3>
             <p className="font-regular mt-4 text-sm uppercase leading-7 text-gray-500">
               We&apos;d love to hear from you.
             </p>
+            <div>
+              <Image
+                src="/images/contact.webp"
+                alt=""
+                width="2200"
+                height="600"
+              />
+            </div>
           </div>
 
           <form className="w-full">
