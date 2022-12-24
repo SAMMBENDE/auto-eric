@@ -73,7 +73,7 @@ const Layout = ({ title, children }) => {
                   <Menu.Button className="text-blue-600">
                     {session.user.name}
                   </Menu.Button>
-                  <Menu.Items className="absolute right-0 w-32 origin-top-right bg-white  text-sm shadow-lg">
+                  <Menu.Items className="absolute right-0 w-40 origin-top-right bg-white  text-sm shadow-lg">
                     <Menu.Item>
                       <DropdownLink className="dropdown-link" href="/profile">
                         Profile
@@ -99,7 +99,7 @@ const Layout = ({ title, children }) => {
                     </Menu.Item>
                     <Menu.Item>
                       <a
-                        className="dropdown-link"
+                        className="dropdown-link mb-12"
                         href="#"
                         onClick={logoutClickHandler}
                       >

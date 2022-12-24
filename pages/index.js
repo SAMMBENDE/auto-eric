@@ -29,7 +29,7 @@ const Home = ({ products }) => {
   return (
     <Layout title="Home Page">
       <div className="body-font sm: my-16 border-b border-gray-200">
-        <h3 className="md:text4xl text-center font-semibold uppercase text-black sm:text-2xl lg:text-6xl">
+        <h3 className="md:text4xl text-center font-semibold uppercase text-black sm:text-4xl lg:text-center lg:text-6xl">
           quality used cars
         </h3>
         <Image src="/images/hero.png" alt="" width="2000" height="600" />
