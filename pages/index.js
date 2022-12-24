@@ -32,7 +32,7 @@ const Home = ({ products }) => {
         <h3 className="md:text4xl text-center font-semibold uppercase text-black sm:text-4xl lg:text-center lg:text-6xl">
           quality used cars
         </h3>
-        <Image src="/images/hero.png" alt="" width="2000" height="600" />
+        <Image src="/images/hero.png" alt="" width="2200" height="600" />
       </div>
 
       <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4">

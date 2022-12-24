@@ -73,16 +73,19 @@ const Layout = ({ title, children }) => {
                   <Menu.Button className="text-blue-600">
                     {session.user.name}
                   </Menu.Button>
-                  <Menu.Items className="absolute right-0 w-40 origin-top-right bg-white  text-sm shadow-lg">
+                  <Menu.Items className="absolute right-0 w-40  bg-white  text-sm shadow-lg">
                     <Menu.Item>
-                      <DropdownLink className="dropdown-link" href="/profile">
+                      <DropdownLink
+                        className="dropdown-link justify-center"
+                        href="/profile"
+                      >
                         Profile
                       </DropdownLink>
                     </Menu.Item>
                     {session.user.isAdmin && (
                       <Menu.Item>
                         <DropdownLink
-                          className="dropdown-link"
+                          className="dropdown-link justify-center"
                           href="/admin/dashboard"
                         >
                           Admin Dashboard
@@ -91,7 +94,7 @@ const Layout = ({ title, children }) => {
                     )}
                     <Menu.Item>
                       <DropdownLink
-                        className="dropdown-link"
+                        className="dropdown-link justify-center"
                         href="/order-history"
                       >
                         Order History
@@ -99,7 +102,7 @@ const Layout = ({ title, children }) => {
                     </Menu.Item>
                     <Menu.Item>
                       <a
-                        className="dropdown-link mb-12"
+                        className="dropdown-link mb-3 justify-center"
                         href="#"
                         onClick={logoutClickHandler}
                       >
