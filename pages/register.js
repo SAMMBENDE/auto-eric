@@ -4,9 +4,9 @@ import { signIn, useSession } from "next-auth/react";
 import { useForm } from "react-hook-form";
 import Layout from "../components/Layout";
 import { getError } from "../utils/error";
-import { toast } from "react-toastify";
+import { toast } from "react-toastify"; // For displaying notifications.
 import { useRouter } from "next/router";
-import axios from "axios";
+import axios from "axios"; // For making HTTP requests
 
 const LoginScreen = () => {
   const { data: session } = useSession();
@@ -21,11 +21,15 @@ const LoginScreen = () => {
   }, [router, session, redirect]);
 
   const {
-    handleSubmit,
+    handleSubmit, //handles form submission
     register,
     getValues,
     formState: { errors },
   } = useForm();
+
+  /*In the submitHandler function, 
+  an Axios POST request is made to the "/api/auth/signup" endpoint 
+  with the user's registration data, including name, email, and password. */
   const submitHandler = async ({ name, email, password }) => {
     try {
       await axios.post("/api/auth/signup", {
@@ -141,3 +145,6 @@ const LoginScreen = () => {
 };
 
 export default LoginScreen;
+
+//  for user registration, handling form input, and user authentication.
+// It leverages various hooks and libraries to create a user-friendly registration form.

@@ -7,6 +7,7 @@ async function handler(req, res) {
   if (req.method !== "POST") {
     return;
   }
+
   //check if feilds are respected before db connection
   const { name, email, password } = req.body;
   if (
@@ -32,6 +33,7 @@ async function handler(req, res) {
     await db.disconnect();
     return;
   }
+
   // if no, create new user & encript pw
   const newUser = new User({
     name,

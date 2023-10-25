@@ -15,7 +15,7 @@ const SellYourCar = () => {
                 Affordable prices that suit different budget sizes
               </p>
             </div>
-            <div className="mx-auto mt-6 grid max-w-md overflow-hidden rounded-xl border border-b-4 border-gray-300 leading-7 text-gray-900 sm:mt-10 md:max-w-lg lg:max-w-none lg:grid-cols-3">
+            {/* <div className="mx-auto mt-6 grid max-w-md overflow-hidden rounded-xl border border-b-4 border-gray-300 leading-7 text-gray-900 sm:mt-10 md:max-w-lg lg:max-w-none lg:grid-cols-3">
               <div className="mb-6 box-border border-solid bg-white px-4 py-8 text-center sm:px-4 sm:py-8 md:px-8 md:py-12 lg:mb-0 lg:px-10">
                 <h3 className="m-0 border-0 border-solid text-2xl font-semibold leading-tight tracking-tight text-black sm:text-3xl md:text-4xl">
                   Basic
@@ -74,7 +74,7 @@ const SellYourCar = () => {
                   Select Plan
                 </button>
               </div>
-            </div>
+            </div> */}
           </div>
         </section>
       </div>

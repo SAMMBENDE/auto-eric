@@ -16,6 +16,7 @@ import Layout from "../../components/Layout";
 import { getError } from "../../utils/error";
 
 ChartJS.register(
+  //registering the chart
   CategoryScale,
   LinearScale,
   BarElement,
@@ -25,6 +26,7 @@ ChartJS.register(
 );
 
 export const options = {
+  //setting for the chart
   responsive: true,
   plugins: {
     legend: {
@@ -68,7 +70,7 @@ const AdminDashboardScreen = () => {
   }, []);
 
   const data = {
-    labels: summary.salesData.map((x) => x._id), // 2022/01 2022/03
+    labels: summary.salesData.map((x) => x._id), // 2022/01 2022/03...data used in chart
     datasets: [
       {
         label: "Sales",

@@ -23,7 +23,7 @@ const LoginScreen = () => {
     handleSubmit,
     register,
     formState: { errors },
-  } = useForm();
+  } = useForm(); // react-hook-form for input validation
   const submitHandler = async ({ email, password }) => {
     try {
       const result = await signIn("credentials", {
@@ -51,9 +51,9 @@ const LoginScreen = () => {
           <input
             type="email"
             {...register("email", {
-              required: "Please enter email",
+              required: "Please enter email", //validation options
               pattern: {
-                value: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$/i,
+                value: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$/i, // REGEX for email partern
                 message: "Please enter valid email",
               },
             })}
@@ -73,7 +73,7 @@ const LoginScreen = () => {
               required: "Please enter password",
               minLength: {
                 value: 6,
-                message: "password must have minimum 6 characters",
+                message: "password must have minimum 6 characters", //password condition
               },
             })}
             className="w-full"

@@ -5,6 +5,7 @@ import Layout from "../components/Layout";
 const Unauthorized = () => {
   const router = useRouter();
   const { message } = router.query;
+
   return (
     <Layout title="Unauthorized Page">
       <h1 className="text-xl">

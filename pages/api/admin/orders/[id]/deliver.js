@@ -25,3 +25,8 @@ const handler = async (req, res) => {
 };
 
 export default handler;
+
+/* This API route handler allows authenticated users with admin privileges
+ to mark an order as delivered. It first verifies the user's session, 
+ updates the order status, and returns appropriate responses based on 
+ the success or failure of the operation. */

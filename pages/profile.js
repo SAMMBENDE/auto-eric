@@ -135,3 +135,8 @@ const ProfileScreen = () => {
 
 ProfileScreen.auth = true;
 export default ProfileScreen;
+
+//This component is used for updating a user's profile, handling form input,
+//and making updates to user data.
+// It is set to require authentication using the auth property.
+//It ensures that only authenticated users can access the profile update page.

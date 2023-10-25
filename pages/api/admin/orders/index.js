@@ -18,3 +18,8 @@ const handler = async (req, res) => {
 };
 
 export default handler;
+
+/* This API route handler allows authenticated users with admin privileges 
+to retrieve a list of orders from a database when they make a GET request 
+to the route. It also includes proper error handling and security checks 
+to restrict access to unauthorized users. */

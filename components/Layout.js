@@ -16,9 +16,10 @@ const Layout = ({ title, children }) => {
 
   const { state, dispatch } = useContext(Store);
   const { cart } = state;
+
   const [cartItemsCount, setcartItemsCount] = useState(0);
   useEffect(() => {
-    setcartItemsCount(cart.cartItems.reduce((a, c) => a + c.quantity, 0));
+    setcartItemsCount(cart.cartItems.reduce((a, c) => a + c.quantity, 0)); //Fix hydration prob after refresh in homepage caused by the badge
   }, [cart.cartItems]);
 
   const logoutClickHandler = () => {
@@ -68,14 +69,14 @@ const Layout = ({ title, children }) => {
 
               {status === "loading" ? (
                 "loading"
-              ) : session?.user ? (
+              ) : session?.user ? ( // menu below comes from headlessUI
                 <Menu as="div" className="relative inline-block">
                   <Menu.Button className="text-blue-600">
                     {session.user.name}
                   </Menu.Button>
                   <Menu.Items className="absolute right-0 w-40  bg-white  text-sm shadow-lg">
                     <Menu.Item>
-                      <DropdownLink
+                      <DropdownLink // from DropdownLink component
                         className="dropdown-link justify-center"
                         href="/profile"
                       >

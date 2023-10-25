@@ -12,6 +12,12 @@ const Home = ({ products }) => {
   const { state, dispatch } = useContext(Store);
   const { cart } = state;
 
+  //The addToCartHandler is an asynchronous function used to add a product to the shopping cart.
+  //It is called when a user clicks the "Add to Cart" button on a product item.
+  //The function first checks if the product is already in the cart and increments the quantity if it is.
+  //Then, it sends an API request to fetch detailed product information and checks if the quantity in stock is sufficient.
+  //If the product is successfully added to the cart, a success notification is displayed.
+
   const addToCartHandler = async (product) => {
     const existItem = cart.cartItems.find((x) => x.slug === product.slug);
     const quantity = existItem ? existItem.quantity + 1 : 1;
@@ -26,6 +32,7 @@ const Home = ({ products }) => {
 
     toast.success("Product added to cart");
   };
+
   return (
     <Layout title="Home Page">
       <div className="body-font sm: my-16 border-b border-gray-200">
@@ -48,6 +55,10 @@ const Home = ({ products }) => {
   );
 };
 
+//This is an async function that runs on the server side during server rendering.
+// It connects to a database, retrieves a list of products, and converts the documents
+//to plain JavaScript objects. These products are then passed as props
+//to the Home component where it's initially rendered.
 export async function getServerSideProps() {
   await db.connect();
   const products = await Product.find().lean();

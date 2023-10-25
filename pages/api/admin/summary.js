@@ -17,6 +17,7 @@ const handler = async (req, res) => {
   const usersCount = await User.countDocuments();
 
   const ordersPriceGroup = await Order.aggregate([
+    //aggregate function to get the total sales on Order
     {
       $group: {
         _id: null,
@@ -29,6 +30,7 @@ const handler = async (req, res) => {
     ordersPriceGroup.length > 0 ? ordersPriceGroup[0].sales : 0;
 
   const salesData = await Order.aggregate([
+    // For sales chart
     {
       $group: {
         _id: { $dateToString: { format: "%Y-%m", date: "$createdAt" } },

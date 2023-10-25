@@ -12,3 +12,5 @@ export default function signature(req, res) {
   res.statusCode = 200;
   res.json({ signature, timestamp });
 }
+
+//signature, timestamp = values used in the frontend

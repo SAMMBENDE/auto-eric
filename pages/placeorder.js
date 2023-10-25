@@ -26,6 +26,10 @@ const PlaceOrderScreen = () => {
   const totalPrice = round2(itemsPrice + shippingPrice + taxPrice);
 
   const router = useRouter();
+
+  //useEffect checks whether a paymentMethod is selected.
+  //If not, it redirects the user to the "/payment" page.
+
   useEffect(() => {
     if (!paymentMethod) {
       router.push("/payment");
@@ -181,3 +185,10 @@ const PlaceOrderScreen = () => {
 
 PlaceOrderScreen.auth = true;
 export default PlaceOrderScreen;
+
+//This component serves as the final step in the order placement process
+//Users can review their order details, initiate the order placement,
+//and proceed with the purchase.
+
+//It set to require authentication using the auth property.
+//It ensures that only authenticated users can access the place order page.

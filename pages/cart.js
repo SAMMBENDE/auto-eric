@@ -23,7 +23,7 @@ function CartScreen() {
     const quantity = Number(qty);
     const { data } = await axios.get(`/api/products/${item._id}`);
     if (data.countInStock < quantity) {
-      return toast.error("Sorry. Car is out of stock");
+      return toast.error("Sorry! Car is out of stock");
     }
     dispatch({ type: "CART_ADD_ITEM", payload: { ...item, quantity } });
     toast.success("Product updated in the cart");
@@ -37,6 +37,7 @@ function CartScreen() {
           Cart is empty. <Link href="/">Go shopping</Link>
         </div>
       ) : (
+        // show items in the cart
         <div className="grid md:grid-cols-4 md:gap-5">
           <div className="overflow-x-auto md:col-span-3">
             <table className="min-w-full ">
@@ -66,7 +67,7 @@ function CartScreen() {
                       </Link>
                     </td>
                     <td className="p-5 text-right">
-                      <select
+                      <select // updating qty in cart via select box
                         value={item.quantity}
                         onChange={(e) =>
                           updateCartHandler(item, e.target.value)
@@ -100,7 +101,7 @@ function CartScreen() {
               </li>
               <li>
                 <button
-                  onClick={() => router.push("login?redirect=/shipping")}
+                  onClick={() => router.push("login?redirect=/shipping")} //if logged, redirect to shipping screen
                   className="primary-button w-full"
                 >
                   Check Out
@@ -115,3 +116,4 @@ function CartScreen() {
 }
 
 export default dynamic(() => Promise.resolve(CartScreen), { ssr: false });
+// export CartScreen as dynamic page that will be rendered only in client-side

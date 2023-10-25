@@ -5,14 +5,14 @@ const data = {
     {
       name: "sam",
       email: "admin@example.com",
-      password: bcrypt.hashSync("123456"),
-      isAdmin: true,
+      password: bcrypt.hashSync("123456"), //  encrypt password in db
+      isAdmin: true, // Admin user
     },
     {
       name: "Jane",
       email: "user@example.com",
       password: bcrypt.hashSync("123456"),
-      isAdmin: false,
+      isAdmin: false, //normal user
     },
   ],
   products: [
@@ -27,8 +27,6 @@ const data = {
       numReviews: 8,
       countInStock: 10,
       description: "A beautiful jewel",
-      // isFeatured: true,
-      // banner: "/images/hero.png",
     },
     {
       name: "Mercedes VF",
@@ -41,8 +39,6 @@ const data = {
       numReviews: 8,
       countInStock: 20,
       description: "A beautiful jewel",
-      // isFeatured: true,
-      // banner: "/images/banner2.jpg",
     },
     {
       name: "Porche Panamera",

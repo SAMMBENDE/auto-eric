@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from "axios"; //For HTTP requests
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect, useReducer } from "react";
@@ -6,6 +6,9 @@ import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import Layout from "../../../components/Layout";
 import { getError } from "../../../utils/error";
+
+//function manages various states related to data fetching, updates, and file uploads.
+//It responds to actions by modifying the application state accordingly
 
 function reducer(state, action) {
   switch (action.type) {
@@ -39,6 +42,8 @@ function reducer(state, action) {
   }
 }
 export default function AdminProductEditScreen() {
+  //editing product details in the admin panel.
+
   const { query } = useRouter();
   const productId = query.id;
   const [{ loading, error, loadingUpdate, loadingUpload }, dispatch] =
@@ -52,8 +57,12 @@ export default function AdminProductEditScreen() {
     handleSubmit,
     formState: { errors },
     setValue,
-  } = useForm();
+  } = useForm(); //register input fields, handle submission, manage validation errors
 
+  //product data is fetched from an API endpoint using Axios.
+  //This data is then populated into the form input fields.
+  //If the fetch is successful, the FETCH_SUCCESS action is dispatched,
+  //and if there is an error, the FETCH_FAIL action is dispatched with an error message.
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -77,6 +86,8 @@ export default function AdminProductEditScreen() {
   }, [productId, setValue]);
 
   const router = useRouter();
+
+  //function for handling product image uploads via cloudinary cloud service.
 
   const uploadHandler = async (e, imageField = "image") => {
     const url = `https://api.cloudinary.com/v1_1/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/upload`;
@@ -102,6 +113,11 @@ export default function AdminProductEditScreen() {
     }
   };
 
+  //Form Submission: When the form is submitted, the submitHandler function is called.
+  //It sends a POST request to upload the file.
+  //If the update is successful, the UPDATE_SUCCESS action is dispatched,
+  //and if there is an error, the UPDATE_FAIL action is dispatched with an error message.
+
   const submitHandler = async ({
     name,
     slug,
@@ -113,6 +129,7 @@ export default function AdminProductEditScreen() {
     description,
   }) => {
     try {
+      //error handling block
       dispatch({ type: "UPDATE_REQUEST" });
       await axios.put(`/api/admin/products/${productId}`, {
         name,

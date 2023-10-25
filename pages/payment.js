@@ -75,3 +75,7 @@ const PaymentScreen = () => {
 };
 PaymentScreen.auth = true;
 export default PaymentScreen;
+
+// This component is set to require authentication
+//  serves as a critical step in the  checkout process
+// allowing users to choose their preferred payment method before proceeding to the final order placement.

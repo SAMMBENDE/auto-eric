@@ -133,5 +133,5 @@ const ShippingScreen = () => {
   );
 };
 
-ShippingScreen.auth = true;
+ShippingScreen.auth = true; // protected page for only authorized users
 export default ShippingScreen;

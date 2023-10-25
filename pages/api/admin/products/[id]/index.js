@@ -25,6 +25,7 @@ const getHandler = async (req, res) => {
   await db.disconnect();
   res.send(product);
 };
+
 const putHandler = async (req, res) => {
   await db.connect();
   const product = await Product.findById(req.query.id);
