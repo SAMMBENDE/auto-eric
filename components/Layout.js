@@ -32,7 +32,7 @@ const Layout = ({ title, children }) => {
     <>
       <Head>
         <title>{title ? title + " -auto-eric" : "auto-eric"}</title>
-        <meta name="description" content="Ecommerce website" />
+        <meta name="description" content="auto-eric" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

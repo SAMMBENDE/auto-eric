@@ -19,3 +19,10 @@ export default handler;
 //  used to populate a database with initial or sample data.
 // Useful during the development and testing phases of an application
 // when you need data in your database to work with and verify that your application behaves as expected.
+
+//To seed sample products
+// 1 insert sample products to mongoDB
+// 2 load products in database in home and product screen
+// 3 check product count in stock in add to cart
+
+//create product model

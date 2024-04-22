@@ -1,3 +1,4 @@
+// frontend orderScreen
 import { PayPalButtons, usePayPalScriptReducer } from "@paypal/react-paypal-js";
 import axios from "axios";
 import { useSession } from "next-auth/react";
@@ -12,11 +13,11 @@ import { getError } from "../../utils/error";
 function reducer(state, action) {
   switch (action.type) {
     case "FETCH_REQUEST":
-      return { ...state, loading: true, error: "" };
+      return { ...state, loading: true, error: "" }; // sending ajax request to backend
     case "FETCH_SUCCESS":
-      return { ...state, loading: false, order: action.payload, error: "" };
+      return { ...state, loading: false, order: action.payload, error: "" }; // after getting data from backend
     case "FETCH_FAIL":
-      return { ...state, loading: false, error: action.payload };
+      return { ...state, loading: false, error: action.payload }; // if an error occurs
     case "PAY_REQUEST":
       return { ...state, loadingPay: true };
     case "PAY_SUCCESS":
@@ -70,7 +71,7 @@ function OrderScreen() {
     const fetchOrder = async () => {
       try {
         dispatch({ type: "FETCH_REQUEST" });
-        const { data } = await axios.get(`/api/orders/${orderId}`);
+        const { data } = await axios.get(`/api/orders/${orderId}`); //getting data from backend
         dispatch({ type: "FETCH_SUCCESS", payload: data });
       } catch (err) {
         dispatch({ type: "FETCH_FAIL", payload: getError(err) });
@@ -304,5 +305,5 @@ function OrderScreen() {
   );
 }
 
-OrderScreen.auth = true;
+OrderScreen.auth = true; //only authenticated users can have access to this page
 export default OrderScreen;

@@ -73,7 +73,7 @@ const LoginScreen = () => {
               required: "Please enter password",
               minLength: {
                 value: 6,
-                message: "password must have minimum 6 characters", //password condition
+                message: "password must have minimum 6 characters",
               },
             })}
             className="w-full"

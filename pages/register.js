@@ -115,7 +115,7 @@ const LoginScreen = () => {
             id="confirmPassword"
             {...register("confirmPassword", {
               required: "Please enter confirm password",
-              validate: (value) => value === getValues("password"),
+              validate: (value) => value === getValues("password"), //checking the values of password in input & those in confirm password input.
               minLength: {
                 value: 6,
                 message: "confirm password is more than 5 chars",

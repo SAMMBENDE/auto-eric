@@ -1,4 +1,4 @@
-//Creating a user in the db
+// Api to Create a new user in the db
 import bcryptjs from "bcryptjs";
 import User from "../../../models/User";
 import db from "../../../utils/db";
