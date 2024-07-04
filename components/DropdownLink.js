@@ -1,13 +1,12 @@
-import Link from "next/link";
-import React from "react";
+import Link from 'next/link'
+import React from 'react'
 
-const DropdownLink = (props) => {
-  let { href, children, ...rest } = props;
+const DropdownLink = ({ href, children, ...rest }) => {
   return (
-    <Link href={href}>
-      <a {...rest}>{children}</a>
+    <Link href={href} {...rest}>
+      {children}
     </Link>
-  );
-};
+  )
+}
 
-export default DropdownLink;
+export default DropdownLink
